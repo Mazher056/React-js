@@ -12,10 +12,13 @@ import DigitalClock from './Components/DigitalClock'
 import UseContext from './Components/UseContextUses'
 import UseContextUses from './Components/UseContextUses'
 import UserefUses from './Components/UserefUses'
+import StopWatch from './Components/StopWatch'
+import Mystopwatch from './Components/Mystopwatch'
+
 
 
 function App() {
-
+  
   const [task, settask] = useState(["Mazher", "alam"]);
   function handleinputchange(value) {
     settask([...task, value]);
@@ -37,7 +40,9 @@ function App() {
       {/* <UseEffect></UseEffect> */}
       {/* <DigitalClock></DigitalClock> */}
       {/* <UseContextUses></UseContextUses> */}
-      <UserefUses></UserefUses>
+      {/* <UserefUses></UserefUses> */}
+      <StopWatch></StopWatch>
+      <Mystopwatch></Mystopwatch>
     </>
   )
 }
