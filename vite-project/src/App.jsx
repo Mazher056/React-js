@@ -14,16 +14,18 @@ import UseContextUses from './Components/UseContextUses'
 import UserefUses from './Components/UserefUses'
 import StopWatch from './Components/StopWatch'
 import Mystopwatch from './Components/Mystopwatch'
+import CreateContext from './Components/CreateContext'
+import UseReducer from './Components/UseReducer'
+import UseReducer1 from './Components/UseReducer1'
 
 
 
 function App() {
-  
   const [task, settask] = useState(["Mazher", "alam"]);
   function handleinputchange(value) {
     settask([...task, value]);
   }
-
+  
   const handledelete = (item) => {
     const newtask = task.filter((e, i) => i != item)
     settask(newtask)
@@ -41,8 +43,12 @@ function App() {
       {/* <DigitalClock></DigitalClock> */}
       {/* <UseContextUses></UseContextUses> */}
       {/* <UserefUses></UserefUses> */}
-      <StopWatch></StopWatch>
-      <Mystopwatch></Mystopwatch>
+      {/* <StopWatch></StopWatch> */}
+      {/* <Mystopwatch></Mystopwatch> */}
+    {/* <CreateContext></CreateContext> */}
+    {/* <UseReducer></UseReducer> */}
+    <UseReducer1></UseReducer1>
+
     </>
   )
 }
