@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 10px;
+}
+
+.deletebutton {
+    margin: 4px;
+
+}
+
+.readbutton {
+    margin: 4px;
+}
+
+.todoname{
+    margin-top: 10px;
+    
+}

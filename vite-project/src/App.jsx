@@ -30,6 +30,7 @@ function App() {
     const newtask = task.filter((e, i) => i != item)
     settask(newtask)
   }
+  
   return (
     <>
       {/* <Header></Header>
@@ -41,13 +42,13 @@ function App() {
     <Displaytask handledeleteitem={handledelete} task={task}></Displaytask> */}
       {/* <UseEffect></UseEffect> */}
       {/* <DigitalClock></DigitalClock> */}
-      {/* <UseContextUses></UseContextUses> */}
+      <UseContextUses></UseContextUses>
       {/* <UserefUses></UserefUses> */}
       {/* <StopWatch></StopWatch> */}
       {/* <Mystopwatch></Mystopwatch> */}
     {/* <CreateContext></CreateContext> */}
     {/* <UseReducer></UseReducer> */}
-    <UseReducer1></UseReducer1>
+    {/* <UseReducer1></UseReducer1> */}
 
     </>
   )

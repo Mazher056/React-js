@@ -9,16 +9,15 @@ export default function UseReducer1() {
       return { list: [...state.list, newitem(action.payload)] }
     }
     if (action.type === "Toggle") {
-        state.list.map((e,index)=>{
-          if(action.payload == index){
-            e.isCompleted = !e.isCompleted
-          }
-        })
-        return {list:state.list}   
+      state.list.map((e, index) => {
+        if (action.payload == index) {
+          e.isCompleted = !e.isCompleted
+        }
+      })
+      return { list: state.list }
     }
-    if(action.type === "Delete"){
-       return {list:state.list.filter((e,index)=> index !== action.payload )}
-     
+    if (action.type === "Delete") {
+      return { list: state.list.filter((e, index) => index !== action.payload) }
     }
   }
   const newitem = (value) => {

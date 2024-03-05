@@ -9,20 +9,30 @@
 //      <child/>
 //    <Mycontext.Provider>
 
-import React ,{ createContext, useState } from "react"
+import React, { createContext, useReducer, useState } from "react"
 import UseContextUses1 from "./UseContextUses1";
 
 
 export const UserContext = createContext();
 
 export default function UseContextUses() {
-    const [username, setusername] = useState("Mazher");
+    const [username, setusername] = useState("Mafzhar");
+
+
+    const reducer = (state, action) => {
+        if (action.type === "change") {
+            return { state:action.tpye  }
+        }
+    }
+
+
+    const [state, dispatch] = useReducer(reducer, username);
     return (
         <>
-        <h1>From Good</h1>
+
             <div className="box">
                 <UserContext.Provider value={username}>
-                   <UseContextUses1 username={username}></UseContextUses1>
+                    <UseContextUses1 value={dispatch}></UseContextUses1>
                 </UserContext.Provider>
             </div>
         </>
